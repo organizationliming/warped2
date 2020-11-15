@@ -8,6 +8,7 @@
 
 #include "FileStream.hpp"
 #include "RandomNumberGenerator.hpp"
+#include "STLLTSFQueue.hpp"
 
 namespace warped {
 
