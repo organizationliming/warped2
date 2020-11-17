@@ -64,6 +64,20 @@ public:
 
     std::list<std::shared_ptr<RandomNumberGenerator>> rng_list_;
 
+    // The LTSF queues below hold all of the events associated with the LP
+    // Holds Unprocessed input events.
+    STLLTSFQueue inQ_;
+
+    // Holds processed input events.
+    STLLTSFQueue procInQ_;
+
+    // Holds anti-messages created by processed input events.
+    STLLTSFQueue outQ_;
+
+    // Holds past states for rollbacks.
+    STLLTSFQueue stateQ_;
+
+
 };
 
 template<class RNGType>
